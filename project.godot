@@ -13,3 +13,12 @@ config_version=5
 config/name="kitty-farmer"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=180
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
