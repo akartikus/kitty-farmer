@@ -1,24 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://berphqx13h2mi"]
+[gd_scene load_steps=11 format=3 uid="uid://berphqx13h2mi"]
 
 [ext_resource type="Texture2D" uid="uid://cof8koyle0411" path="res://assets/Premium Charakter Spritesheet.png" id="1_dl655"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_f4rxr"]
-
-[sub_resource type="Animation" id="Animation_nq3lj"]
-resource_name = "idle"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [3, 8]
-}
 
 [sub_resource type="Animation" id="Animation_ujcsq"]
 length = 0.001
@@ -33,38 +16,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [3]
-}
-
-[sub_resource type="Animation" id="Animation_xd622"]
-resource_name = "sidewalk"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [48, 55]
-}
-
-[sub_resource type="Animation" id="Animation_n0asn"]
-resource_name = "upwalk"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [41, 47]
 }
 
 [sub_resource type="Animation" id="Animation_ikx8u"]
@@ -83,12 +34,95 @@ tracks/0/keys = {
 "values": [32, 39]
 }
 
+[sub_resource type="Animation" id="Animation_nq3lj"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3, 8]
+}
+
+[sub_resource type="Animation" id="Animation_hj3ng"]
+resource_name = "sideidle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [24, 31]
+}
+
+[sub_resource type="Animation" id="Animation_xd622"]
+resource_name = "sidewalk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [48, 55]
+}
+
+[sub_resource type="Animation" id="Animation_phyxu"]
+resource_name = "upidle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8, 15]
+}
+
+[sub_resource type="Animation" id="Animation_n0asn"]
+resource_name = "upwalk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [41, 47]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mqpi4"]
 _data = {
 "RESET": SubResource("Animation_ujcsq"),
 "downwalk": SubResource("Animation_ikx8u"),
 "idle": SubResource("Animation_nq3lj"),
+"sideidle": SubResource("Animation_hj3ng"),
 "sidewalk": SubResource("Animation_xd622"),
+"upidle": SubResource("Animation_phyxu"),
 "upwalk": SubResource("Animation_n0asn")
 }
 

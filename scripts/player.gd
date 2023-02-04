@@ -31,7 +31,7 @@ func process_movement():
 			is_animate = false
 			$AnimationPlayer.pause()
 			if not is_acting:
-				$IdleTimer.start(1)
+				$IdleTimer.start(1.5)
 		velocity.x = 0
 		velocity.y = 0
 		
@@ -39,4 +39,11 @@ func process_movement():
 	
 func _on_idle_timer_timeout():
 	# Play different idle according to direction
-	$AnimationPlayer.play("idle")
+	match last_direction:
+		Vector2.DOWN:
+			$AnimationPlayer.play("idle")
+		Vector2.UP:
+			$AnimationPlayer.play("upidle")
+		Vector2.LEFT, Vector2.RIGHT:
+			$AnimationPlayer.play("sideidle")
+			
